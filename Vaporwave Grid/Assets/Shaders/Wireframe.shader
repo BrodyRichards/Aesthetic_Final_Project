@@ -4,7 +4,8 @@
         _MainColor ("MainColor", Color) = (1, 1, 1, 1)
         _LineWidth ("Line width", Range(0, 1)) = 0.1
         _ParcelSize ("ParcelSize", Range(0, 100)) = 1
-        _Alpha ("Alpha", Range(0, 1)) = 1
+        _GAlpha ("Grid Alpha", Range(0, 1)) = 0
+        _LAlpha ("Wireframe Alpha", Range(0, 1)) = 1
     }
     SubShader {
         Tags { "Queue"="Transparent" "RenderType"="Transparent" }
@@ -17,7 +18,8 @@
         float4 _MainColor;
         fixed _LineWidth;
         float _ParcelSize;
-        float _Alpha;
+        float _GAlpha;
+        float _LAlpha;
  
         struct Input {
             float2 uv_MainTex;
@@ -29,7 +31,7 @@
             half val2 = step(_LineWidth * 2, frac(IN.worldPos.z / _ParcelSize) + _LineWidth);
             fixed val = 1 - (val1 * val2);
             o.Albedo = lerp(_MainColor, _LineColor, val);
-            o.Alpha = lerp(0, 1, val);
+            o.Alpha = lerp(_GAlpha, _LAlpha, val);
         }
         ENDCG
     }
