@@ -156,7 +156,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1504,7 +1504,7 @@ PrefabInstance:
     - target: {fileID: 8079402426565434433, guid: f67928e16d0cb444f99a96201cfd7fe4,
         type: 3}
       propertyPath: SubModule.subEmitters.Array.data[0].emitProbability
-      value: 0.4301293
+      value: 0.51214194
       objectReference: {fileID: 0}
     - target: {fileID: 8079402426565434433, guid: f67928e16d0cb444f99a96201cfd7fe4,
         type: 3}
