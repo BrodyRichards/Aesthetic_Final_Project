@@ -28,6 +28,7 @@ public class GlitchEffect : MonoBehaviour
 
     private float mag;
 
+    public ParticleSystem ps;
 
     void Start()
 	{
@@ -61,6 +62,10 @@ public class GlitchEffect : MonoBehaviour
 		}
 
 		mag = aveMag[0];
+
+        ps.subEmitters.SetSubEmitterEmitProbability(0, Mathf.Clamp01(Mathf.Lerp(-1f, 1f, mag)));
+        ps.subEmitters.SetSubEmitterEmitProbability(1, mag > .7 ? 0.1f : 0);
+
         if (mag > 0.9)
         {
             colorIntensity = mag;
