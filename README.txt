@@ -5,7 +5,7 @@ Brendan Smith-Fagan - Lightning
 
 For viewing the project, just download the .exe and run it with headphones on. pay attention for the glitch effect as it kicks in a little later.
 
-https://youtu.be/SeTjoIKEtWw (video, please watch wntire video to see glitch effect in action)
+https://youtu.be/SeTjoIKEtWw (video, please watch entire video to see glitch effect in action)
 
 https://github.com/BrodyRichards/Aesthetic_Final_Project (github w/ code and .exe) (use the folder called vaporwave grid and NOT glitch)
 
